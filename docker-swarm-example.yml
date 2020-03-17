@@ -1,9 +1,17 @@
 version: '3.7'
 
 services:
+  apt-cacher-ng:
     image: donmatis/apt-cacher-ng:testing
     init: true
     ports:
-        - '3142:3142'
+      - '3142:3142'
     volumes:
-        - /your/volume:/var/cache/apt-cacher-ng
+      - type: bind
+        source: ./cache
+        target: /var/cache/apt-cacher-ng
+    deploy:
+      mode: replicated
+      replicas: 3
+      placement:
+        constraints: [ node.role == worker ]
