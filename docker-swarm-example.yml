@@ -12,6 +12,6 @@ services:
         target: /var/cache/apt-cacher-ng
     deploy:
       mode: replicated
-      replicas: 3
+      replicas: 1
       placement:
         constraints: [ node.role == worker ]
