@@ -1,0 +1,9 @@
+version: '3.7'
+
+services:
+    image: donmatis/apt-cacher-ng:testing
+    init: true
+    ports:
+        - '3142:3142'
+    volumes:
+        - /your/volume:/var/cache/apt-cacher-ng
