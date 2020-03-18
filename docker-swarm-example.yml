@@ -15,5 +15,6 @@ services:
       mode: replicated
       # we don't need more than one replicas, although it's possible
       replicas: 1
+      # placement is optional
       placement:
         constraints: [ node.role == worker ]
