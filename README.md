@@ -2,7 +2,7 @@
 
 A simple approach to ubuntu 18.04 running apt-cacher-ng.
 
-_Heavily based on https://github.com/sameersbn/docker-apt-cacher-ng_
+_this image is heavily based on https://github.com/sameersbn/docker-apt-cacher-ng_
 
 ---
 
