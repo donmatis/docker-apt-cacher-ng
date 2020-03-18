@@ -7,11 +7,13 @@ services:
     ports:
       - '3142:3142'
     volumes:
+      # change the source to a share swarm folder to be usable from all nodes
       - type: bind
         source: ./cache
         target: /var/cache/apt-cacher-ng
     deploy:
       mode: replicated
+      # we don't need more than one replicas, although it's possible
       replicas: 1
       placement:
         constraints: [ node.role == worker ]
