@@ -2,8 +2,6 @@
 
 A simple approach to ubuntu 18.04 running apt-cacher-ng.
 
-_this image is heavily based on https://github.com/sameersbn/docker-apt-cacher-ng_
-
 ---
 
 For docker swarm you can use the example file, then on hosts add the file `/etc/apt/apt.conf.d/02proxy` or any name you want using `01` or `02` in the front, with the following contents:
@@ -11,3 +9,6 @@ For docker swarm you can use the example file, then on hosts add the file `/etc/
 ```sh
 Acquire::http { Proxy "http://docker-swarm-node-hostname:3142"; }
 ```
+
+---
+_this image is heavily based on https://github.com/sameersbn/docker-apt-cacher-ng_
