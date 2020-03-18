@@ -10,5 +10,7 @@ For docker swarm you can use the example file, then on hosts add the file `/etc/
 Acquire::http { Proxy "http://docker-swarm-node-hostname:3142"; }
 ```
 
+If you plan to use it on swarm then you will also need to bind a path that it's accessible to all nodes.
+
 ---
 _this image is heavily based on https://github.com/sameersbn/docker-apt-cacher-ng_
